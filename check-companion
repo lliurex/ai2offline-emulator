@@ -1,6 +1,8 @@
 #!/bin/bash
 FIND=1
 TIME=0
+#Wait one minute
+sleep 60
 while [ $FIND -ne 0 ]
 do
 	sleep 10
