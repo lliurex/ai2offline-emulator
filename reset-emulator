@@ -1,0 +1,41 @@
+#!/bin/bash
+# "Reset" The emulator by removing the user specific copy of
+# Appinventor-emulator-data. The next time the emulator is run
+# a new fresh copy will be used.
+
+# This is to try to get around a bug in the Android SDK where
+# the emulator won't start and you'll see the message
+# NAND: Could not create temp file for system NAND disk image.
+# This is a permission problem on /tmp/android. Doing the
+# rf here might not work either but it's worth a try.  If this doesn't
+# work, you should execute this remove command as root.
+rm -rf /tmp/android
+
+# cd to the directory where these commands are
+cd `dirname $0`
+
+# create the emulator directory if necessary
+APPINVDIR=$HOME/.appinventor
+EMUDIR=$HOME/.appinventor/emulator
+
+if [ ! -d $APPINVDIR ]
+then
+mkdir $APPINVDIR
+fi
+if [ ! -d $EMUDIR ]
+then
+mkdir $EMUDIR
+fi
+
+# install the prebuilt user data image
+EMDATA=Appinventor-emulator-data
+DATAFILE=$EMUDIR/$EMDATA
+if [  -f $DATAFILE ]
+then
+rm -f $DATAFILE
+fi
+
+exit 0
+
+
+
