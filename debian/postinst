@@ -1,0 +1,4 @@
+chmod -R 777 /opt/ai2offline/AI2Offline7.7/from-Android-SDK/avd
+#unlz the lib
+mv /opt/ai2offline/AI2Offline7.7/from-Android-SDK/avd/emulator/lib64/qt/lib/libQt6WebEngineCoreAndroidEmu.so.6 /opt/ai2offline/AI2Offline7.7/from-Android-SDK/avd/emulator/lib64/qt/lib/libQt6WebEngineCoreAndroidEmu.so.6.lzma
+lzma -d /opt/ai2offline/AI2Offline7.7/from-Android-SDK/avd/emulator/lib64/qt/lib/libQt6WebEngineCoreAndroidEmu.so.6.lzma
