@@ -1,0 +1,20 @@
+#!/bin/bash
+FIND=1
+TIME=0
+while [ $FIND -ne 0 ]
+do
+	sleep 10
+	adb shell pm list packages
+	FIND=$?
+	#Timeout, just in case...
+	let TIME=TIME+1
+	#240 seconds, it must be enough for emulator to start
+	[ $TIME -ge 24 ] && FIND=0
+done
+	
+adb shell pm list packages | grep mit
+FIND=$?
+if [ $FIND -ne 0 ]
+then
+	adb install  ../AI2\ Offline\ Companion.apk
+fi

@@ -1,0 +1,9 @@
+/opt/ai2offline/AI2Offline7.7/aiStarter-linux
+/opt/ai2offline/AI2Offline7.7/from-Android-SDK/emulator/emulator
+6
+/opt/ai2offline/AI2Offline7.7/from-Android-SDK/emulator/emulator
+-avd
+ai2offline
+-no-snapshot-load
+-no-snapshot-save
+-verbose
