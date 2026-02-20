@@ -9,7 +9,7 @@ Homepage: https://github.com/lliurex/ai2offline-emulator
 
 Package: ai2offline-emulator
 Architecture: all
-Depends: zero-lliurex-ai2offline, android-sdk, android-sdk-platform-tools, xz-utils, ai2offline-emulator-vulkan, ai2offline-emulator-qtlibs
+Depends: zero-lliurex-ai2offline, android-sdk, android-sdk-platform-tools, xz-utils, ai2offline-emulator-vulkan, ai2offline-emulator-qtlibs, ai2offline-avd
 Description: Emulator for ai2offline
  Android 12 emulator for ai2offline
 
