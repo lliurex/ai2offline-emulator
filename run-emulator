@@ -1,0 +1,16 @@
+#!/bin/bash
+REALNAME=$(realpath $0)
+BASEDIR=$(dirname $REALNAME)/../from-Android-SDK
+export ANDROID_AVD_HOME=$BASEDIR/avd
+export ANDROID_USER_HOME=$BASEDIR/
+export ANDROID_HOME=$BASEDIR/
+export ANDROID_EMULATOR_HOME=$BASEDIR/
+export ANDROID_SDK_ROOT=$BASEDIR
+
+echo $ANDROID_AVD_HOME
+echo $ANDROID_HOME
+echo $ANDROID_SDK_ROOT
+
+./check-companion 1>/dev/null 2>&1 &
+/opt/ai2offline/AI2Offline7.7/from-Android-SDK/emulator/emulator -avd ai2offline -no-snapshot-load -no-snapshot-save -no-metrics
+

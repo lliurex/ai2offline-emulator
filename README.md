@@ -1,2 +1,2 @@
 # ai2offline-emulator
-Emulator for ai2offline (base files)
+Android 12 emulator for ai2offline
