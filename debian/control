@@ -1,0 +1,24 @@
+Source: ai2offline-emulator
+Section: admin
+Priority: optional
+Maintainer: Juanma1980 <juanma1980@gmail.com>
+Uploaders: LliureX Team
+Build-Depends: debhelper (>= 12.0)
+Standards-Version: 4.4.1
+Homepage: https://github.com/lliurex/ai2offline-emulator
+
+Package: ai2offline-emulator
+Architecture: all
+Depends: zero-lliurex-ai2offline, 
+	android-sdk, 
+	android-sdk-platform-tools, 
+	xz-utils, 
+	ai2offline-emulator-gles, 
+	ai2offline-emulator-libs, 
+	ai2offline-emulator-vulkan, 
+	ai2offline-emulator-qtlibs, 
+	ai2offline-avd,
+	ai2offline-qemu
+Description: Emulator for ai2offline
+ Android 12 emulator for ai2offline
+
